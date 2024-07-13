@@ -4,12 +4,18 @@ using namespace std;
 int main() {
 	int a = 45;
 	int b = 76;
+	int min;
+	
+	if (a > b) {
+		min = b;
+		b = a;
+		a = min;
+	}
 
-	if (a % 2) {
-		cout << a << endl;
-	}else if (b % 2) {
-		cout << b << endl;
-	}else {
-		cout << "both numbers are even,no one is odd!" << endl;
+	while (a <= b) {
+		if (a & 1) {
+			cout << a << " => odd"<<endl;
+		}
+		a++;
 	}
 }
